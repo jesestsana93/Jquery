@@ -1,0 +1,22 @@
+SELECCION MEDIANTE CLASES
+En CSS seleccionamos las clases usando un punto (.). Si tenemos class="rojo" en nuestro HTML, podemos 
+modificarlo en CSS usando .rojo. En jQuery, todo lo que necesitamos es escribir '.rojo' entre comillas, 
+y podemos ponerlo dentro de $() para crear un objeto de jQuery.
+
+SELECCION MEDIANTE ID
+Esto lo hacemos escribiendo el nombre de ID (entre comillas) dentro de $(). Así como necesitamos el . para las clases,
+también necesitamos usar # para los ID. Podemos modificar a id="encabezado" así:
+$('#encabezado');
+
+El punto y coma al final es importante: es la manera en que jQuery sabe que le estamos dando una orden.
+
+SELECCIONS FLEXIBLES
+Por ejemplo podemos aplicar fadeTo() a un selector p de esta manera:
+$('p').fadeTo('slow', 0);
+
+Podemos aplicar fadeTo() a un selector li de esta manera:
+$('li').fadeTo('slow', 0);
+
+Podemos aplicar fadeTo() tanto al selector p como al selector li, de esta manera:
+$('p, li').fadeTo('slow', 0);
+Esto se denomina selector compuesto.

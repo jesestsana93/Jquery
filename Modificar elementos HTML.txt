@@ -1,0 +1,33 @@
+La adición dinámica de elementos a nuestra página de HTML es una herramienta poderosa: nos permite  no solamente modificar
+el formato, sino la estructura misma de nuestros sitios web como respuesta a las interacciones de los usuarios.
+
+Lo que queremos hacer es pasar un elemento completo de HTML entre comillas:
+$p = $("<p>¡Soy un párrafo nuevo!</p>");
+
+INSERTAR ELEMENTOS
+.append() inserta el elemento especificado como el último hijo del elemento al que apunta.
+.prepend() inserta el elemento especificado como el primer hijo del elemento al que apunta. 
+Si tuviéramos un div con clase .info,
+
+$('.info').append('<p>¡Algo!</p>');
+$('.info').prepend('<p>¡Algo!</p>');
+
+agregaríamos un párrafo con el texto "¡Algo!" dentro de todos los divs con clase .info. .append() hará 
+que el párrafo sea el último hijo de cada div; .prepend() hará que el párrafo sea el primer hijo de cada div.
+
+.appendTo() hace lo mismo que .append(), pero invierte el orden de "lo que hay que añadir" y "donde hay que añadirlo." El código
+$('<p>¡Algo!</p>').appendTo('.info');
+tiene el mismo efecto que el código .append() anterior. .prependTo() tiene una relación parecida con .prepend().
+
+ANTES Y DESPUES
+Podemos especificar en qué parte del DOM insertamos un elemento con las funciones .before() y .after(). La sintaxis se ve así:
+
+$('objetivo').after('<etiqueta>Adición</etiqueta>');
+Donde 'objetivo' es el elemento después del cual quieres agregar algo, y la parte en medio de las <etiqueta> es el elemento de HTML que quieres agregar. 
+
+ELIMINAR ELEMENTOS
+.empty() elimina el contenido y todos los descendientes de un elemento. Por ejemplo, si usas .empty() en un 'ol', también eliminarás todos sus 
+'li' y su texto.
+
+.remove(), no solo elimina el contenido de un elemento, sino que también elimina el elemento en sí. Ejemplo:
+$('elemento a eliminar').remove();
